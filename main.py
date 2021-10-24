@@ -83,7 +83,7 @@ async def correct_captcha_cb_handler(c: Client, cb: CallbackQuery):
                 await cb.edit_message_reply_markup()
 
                 await cb.edit_message_text(
-                    f"{mention} has successfully solved the Captcha and verified."
+                    f"{mention} Berhasil Verifikasi dan Menyelesaikan Captcha."
                 )
 
                 remove_captcha(cb.message.chat.id, cb.message.message_id)
@@ -92,12 +92,12 @@ async def correct_captcha_cb_handler(c: Client, cb: CallbackQuery):
                 await c.edit_message_text(
                     chat_id=cb.message.chat.id,
                     message_id=cb.message.message_id,
-                    text=f"{mention} has Failed to solve the Captcha."
+                    text=f"{mention} Gagal menyelesaikan Captcha, Member Tidak Terverifikasi."
                 )
 
         else:
             await cb.answer(
-                "This captcha is not for you.",
+                "Verifikasi Captcha ini bukan untukmu!",
                 show_alert=True
             )
 
@@ -137,8 +137,8 @@ async def on_new_chat_members(c: Client, m: Message):
     mention = f"<a href='tg://user?id={m.from_user.id}'>{m.from_user.first_name}</a>"
     cap_message = await m.reply_photo(
         photo=f"{secret}.png",
-        caption=f"{emoji.SHIELD} {mention}, To complete your Captcha select the correct Text "
-                f"from the bellow options.",
+        caption=f"{emoji.SHIELD} {mention}, Untuk Menyelesaikan Verifikasi, Pilih Teks yang Benar "
+                f"dari pilihan dibawah.",
         reply_markup=InlineKeyboardMarkup(
             [buttons]
         )
@@ -167,18 +167,18 @@ async def hide_pictures_handler(c: Client, m: Message):
     mention = f"<a href='tg://user?id={m.from_user.id}'>{m.from_user.first_name}</a>"
 
     await m.reply_text(
-        f"I have hidden the photo sent by {mention}.",
+        f"Saya mempunyai Foto Tersembunyi dari {mention}.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text=f"{emoji.FRAMED_PICTURE} Show me the Photo.",
+                        text=f"{emoji.FRAMED_PICTURE} Tunjukkan Foto Itu.",
                         callback_data=f"shp_{hid_message.message_id}"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text=f"{emoji.FRAMED_PICTURE} Add the Photo to Chat.",
+                        text=f"{emoji.FRAMED_PICTURE} Menambahkan foto Ke Chat.",
                         callback_data=f"apc_{hid_message.message_id}_{m.chat.id}"
                     )
                 ]
@@ -229,7 +229,7 @@ async def apc_cb_handler(c: Client, cb: CallbackQuery):
             await cb.answer()
         else:
             await cb. answer(
-                "You need to be an admin to approve this photo to be added to the chat permanently!",
+                "Kamu harus menjadi Admin untuk Menyetujui Foto ini Berada di Chat secara Permanen!",
                 show_alert=True
             )
 
@@ -254,7 +254,7 @@ async def check_resolved(msg):
                 await baboon.edit_message_text(
                     chat_id=msg.chat.id,
                     message_id=msg.message_id,
-                    text=f"{mention} has Failed to solve the Captcha within the given time period."
+                    text=f"{mention} Gagal Menyelesaikan Verifikasi Chaptha dengan Waktu yang Diberikan."
                 )
             except MessageNotModified as e:
                 pass
