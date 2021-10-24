@@ -1,6 +1,6 @@
 {
-    "name": "baboonCaptcha",
-    "description": "https://telegram.dog/babooonbot",
+    "name": "FBChaptca",
+    "description": "Bot Telegram untuk Verifikasi Member baru di Grub",
     "keywords": [
         "telegram",
         "best",
@@ -9,16 +9,16 @@
         "open",
         "source"
     ],
-    "success_url": "https://telegram.dog/babooonbot",
-    "website": "https://github.com/eyaadh/baboonCaptcha",
-    "repository": "https://github.com/eyaadh/baboonCaptcha",
+    "success_url": "https://telegram.dog/fbchaptcabot",
+    "website": "https://github.com/HariyonoRizki2/FBChaptca",
+    "repository": "https://github.com/HariyonoRizki2/FBChaptca",
     "env": {
         "ENV": {
             "description": "Setting this to ANYTHING will enable VARs when in ENV mode",
             "value": "ANYTHING"
         },
         "TG_BOT_TOKEN": {
-            "description": "Your bot token, as a string.",
+            "description": "Masukan token bot mu.",
             "required": true
         },
         "TG_BOT_DUSTBIN": {
@@ -26,11 +26,11 @@
             "required": true
         },
         "TG_APP_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Dapatkan APP_ID dari https://my.telegram.org",
             "required": true
         },
         "TG_API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Dapatkan API_HASH dari https://my.telegram.org",
             "required": true
         }
     },
