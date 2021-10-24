@@ -1,5 +1,5 @@
-# FBChaptca:
-A telegram bot that requires new joiners to a chat group to be verified by issuing them a captcha to solve. Say no to bots and spammers basically.
+# FBChaptha:
+Bot telegram yang membutuhkan anggota baru ke grup obrolan untuk diverifikasi dengan mengeluarkan captcha untuk dipecahkan. Katakan tidak pada bot dan spammer pada dasarnya.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
