@@ -1,7 +1,7 @@
 # FBChaptha:
 Bot telegram yang membutuhkan anggota baru ke grup obrolan untuk diverifikasi dengan mengeluarkan captcha untuk dipecahkan. Katakan tidak pada bot dan spammer pada dasarnya.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/template/github.com/HariyonoRizki2/FBChaptca)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HariyonoRizki2/FBChaptca)
 
 ## Cloning and Run:
 1. `git clone https://github.com/HariyonoRizki2/FBCaptcha.git`, to clone the repository.
