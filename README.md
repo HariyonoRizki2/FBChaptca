@@ -1,4 +1,4 @@
-# BaboonCaptcha:
+# FBChaptca:
 A telegram bot that requires new joiners to a chat group to be verified by issuing them a captcha to solve. Say no to bots and spammers basically.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
